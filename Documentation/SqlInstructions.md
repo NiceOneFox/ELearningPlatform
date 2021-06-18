@@ -37,7 +37,7 @@
 3. Restore database from backup
     1. Open SQL Server Management Studio
     2. Connect to your server instance by clicking "Connect" ![img_1.png](./Images/SqlInstructions/img_15.png)
-    3. TODO: Download database
+    3. Download database
     4. Expand your local SQL Server, right click "Databases" item and choose "Import Data-tier Application" ![img_2.png](./Images/SqlInstructions/img_16.png)
     5. _Optionally_ Check the checkbox "Do not show this page again" ![img_3.png](./Images/SqlInstructions/img_17.png)
     6. Click "Next"
