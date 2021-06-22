@@ -10,13 +10,14 @@ using System.Web.Profile;
 using EPiServer.Security;
 using EPiServer.DataAbstraction;
 using EPiServer.Personalization;
+using EPiServer.Web.Mvc;
 
 namespace EpiserverLearningPlatform.Controllers
 {
     /// <summary>
     /// Used to register a user for first time
     /// </summary>
-    public class RegisterController : Controller
+    public class RegisterController : PageController<RegisterPage>
     {
         const string AdminRoleName = "WebAdmins";
         public const string ErrorKey = "CreateError";
@@ -32,7 +33,7 @@ namespace EpiserverLearningPlatform.Controllers
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         [ValidateInput(false)]
-        public ActionResult Index(RegisterViewModel model)
+        public ActionResult Index(RegisterPage model)
         {
             if (ModelState.IsValid)
             {
