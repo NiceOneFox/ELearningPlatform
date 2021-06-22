@@ -5,6 +5,8 @@ using EPiServer.SpecializedProperties;
 using System;
 using System.ComponentModel.DataAnnotations;
 
+// SAMPLE PAGE
+ 
 namespace EpiserverLearningPlatform.Models.Pages
 {
     [ContentType(DisplayName = "AuthorizationPage", GUID = "836e8f70-a8b1-4d68-86de-e7254345e29a", Description = "")]
@@ -19,8 +21,8 @@ namespace EpiserverLearningPlatform.Models.Pages
 
         [CultureSpecific]
         [Display(Name = "Main body",
-     Order = 20,
-     GroupName = Global.GroupNames.Contact)]
+         Order = 20,
+         GroupName = Global.GroupNames.Contact)]
         public virtual string Password { get; set; }
 
 

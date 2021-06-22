@@ -11,6 +11,7 @@ using EPiServer.Security;
 using EPiServer.DataAbstraction;
 using EPiServer.Personalization;
 using EPiServer.Web.Mvc;
+using EpiserverLearningPlatform.Models.Pages;
 
 namespace EpiserverLearningPlatform.Controllers
 {
