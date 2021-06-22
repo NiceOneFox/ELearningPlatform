@@ -1,0 +1,11 @@
+@using EpiserverLearningPlatform
+@model PageViewModel<EpiserverLearningPlatform.Models.Pages.CoursePage>
+
+<div class="">
+    <img src="@Url.ContentUrl(Model.CurrentPage.BackgroundImage)"/>
+    <img src="@Url.ContentUrl(Model.CurrentPage.BannerImage)"/>
+    <div>
+        <h1>@Html.PropertyFor(m => m.CurrentPage.CourseName)</h1>
+        <div><span>@Html.PropertyFor(m => m.CurrentPage.StartDate)</span><span>@Model.CurrentPage.EndDate</span></div>
+    </div>
+</div>
