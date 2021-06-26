@@ -394,8 +394,6 @@
     <Content Include="Resources\LanguageFiles\PropertyNames.xml" />
     <Content Include="Resources\LanguageFiles\Views.xml" />
     <Content Include="Resources\LanguageFiles\_ReadMe.txt" />
-    <Content Include="Static\css\bootstrap-collapse.js" />
-    <Content Include="Static\css\bootstrap-responsive.css" />
     <Content Include="Static\css\bootstrap.css" />
     <Content Include="Static\css\editmode.css" />
     <Content Include="Static\css\editor.css" />
@@ -440,6 +438,7 @@
     <Content Include="Static\html\error.htm" />
     <Content Include="Static\img\glyphicons-halflings-white.png" />
     <Content Include="Static\img\glyphicons-halflings.png" />
+    <Content Include="Static\img\online-course.png" />
     <Content Include="Static\js\bootstrap.js" />
     <Content Include="Static\js\jquery-ui.js" />
     <Content Include="Static\js\jquery.js" />
