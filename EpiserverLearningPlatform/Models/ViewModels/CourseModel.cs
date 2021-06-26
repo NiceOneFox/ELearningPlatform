@@ -9,7 +9,7 @@ namespace EpiserverLearningPlatform.Models.ViewModels
     public class CourseModel
     {
            [UIHint(UIHint.Image)]
-           public virtual ContentReference CourseImage { get; set; }
+           public  virtual ContentReference CourseImage { get; set; }
 
            public virtual string CourseName { get; set; }
 

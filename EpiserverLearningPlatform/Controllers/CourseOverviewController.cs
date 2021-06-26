@@ -13,12 +13,13 @@ using System.Web.Mvc;
 
 namespace EpiserverLearningPlatform.Controllers
 {
-    public class CourseOverviewController : PageControllerBase<CourseOverviewPage>
+    public class CourseOverviewController : PageController<CourseOverviewPage>
     {
         public ActionResult Index(SitePageData currentPage)
         {
-            
-            return View(currentPage);
+            var model = PageViewModel.Create(currentPage);
+
+            return View(model);
         }
     }
 }

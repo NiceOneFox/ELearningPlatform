@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+
+@model EpiserverLearningPlatform.Models.Blocks.CourseBlock
+
+<div class="form-group">
+    <h2>@Html.PropertyFor(x => x.CourseName)</h2>
+    <h2>@Html.PropertyFor(x => x.StartDate)</h2>
+    <h2>@Html.PropertyFor(x => x.EndDate)</h2>
+</div>
