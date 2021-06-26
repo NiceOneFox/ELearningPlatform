@@ -17,14 +17,8 @@ namespace EpiserverLearningPlatform.Controllers
     {
         public ActionResult Index(SitePageData currentPage)
         {
-            var model = CreateModel(currentPage);
-            return View(model);
-        }
-
-        private static IPageViewModel<SitePageData> CreateModel(SitePageData page)
-        {
-            var type = typeof(PageViewModel<>).MakeGenericType(page.GetOriginalType());
-            return Activator.CreateInstance(type, page) as IPageViewModel<SitePageData>;
+            
+            return View(currentPage);
         }
     }
 }
