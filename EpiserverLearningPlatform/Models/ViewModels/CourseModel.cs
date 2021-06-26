@@ -9,12 +9,12 @@ namespace EpiserverLearningPlatform.Models.ViewModels
     public class CourseModel
     {
            [UIHint(UIHint.Image)]
-           public ContentReference Image { get; set; }
+           public virtual ContentReference CourseImage { get; set; }
 
-            public string CourseName { get; set; }
+           public virtual string CourseName { get; set; }
 
-            public DateTime StartDate { get; set; }
+            public virtual DateTime StartDate { get; set; }
 
-            public DateTime EndDate { get; set; }
+            public virtual DateTime EndDate { get; set; }
     }
 }
