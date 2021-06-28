@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* CSS Document */
 
 /*Headers*/
@@ -645,3 +645,93 @@ form.search-form {
 .main-logo {
     width: 100px;
 }
+
+
+.main-navbar {
+    margin-top: 10px;
+}
+
+.main-logo {
+    width: 100px;
+}
+
+.main-content {
+    margin-top: 10px;
+}
+
+.grey-background {
+    background-color: #b3b2b1;
+    padding: 30px;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 0;
+}
+
+.front-panel {
+    width: 80%;
+    z-index: 1;
+    margin: 40px 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.subpanel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.courses-wrapper {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.course {
+    margin-left: 10px;
+    padding: 20px 5px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 2;
+    background-color: #ffffff;
+    border: 1px #000000 solid;
+}
+
+.course-image {
+    height: 100px;
+}
+
+.course-date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 15px;
+}
+
+.date {
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+.course-name {
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+    
