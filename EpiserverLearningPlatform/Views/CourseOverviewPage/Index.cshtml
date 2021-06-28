@@ -1,0 +1,50 @@
+﻿@model CourseOverviewModel
+@*model IEnumerable<EpiserverLearningPlatform.Models.ViewModels.CourseModel> *@
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Name
+            @* @Html.DisplayNameFor(model => model.CurrentPage) *@
+        </th>
+        <th>
+            Start Date
+            @* @Html.DisplayNameFor(model => model.StartDate) *@
+        </th>
+        <th>
+            End Date
+            @* @Html.DisplayNameFor(model => model.EndDate) *@
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var course in Model.Courses)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => course.CourseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => course.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => course.EndDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+
+</table>

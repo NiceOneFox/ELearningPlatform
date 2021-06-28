@@ -318,7 +318,7 @@
     <Compile Include="Business\UIDescriptors\ContainerPageUIDescriptor.cs" />
     <Compile Include="Controllers\ContactBlockController.cs" />
     <Compile Include="Controllers\CourseBlockController.cs" />
-    <Compile Include="Controllers\CourseOverviewController.cs" />
+    <Compile Include="Controllers\CourseOverviewPageController.cs" />
     <Compile Include="Controllers\DefaultPageController.cs" />
     <Compile Include="Controllers\FindSearchPageController.cs" />
     <Compile Include="Controllers\GDPRApiDemoPageController.cs" />
@@ -371,6 +371,7 @@
     <Compile Include="Models\ViewModels\ContactBlockModel.cs" />
     <Compile Include="Models\ViewModels\ContentRenderingErrorModel.cs" />
     <Compile Include="Models\ViewModels\CourseModel.cs" />
+    <Compile Include="Models\ViewModels\CourseOverviewModel.cs" />
     <Compile Include="Models\ViewModels\FindSearchContentModel.cs" />
     <Compile Include="Models\ViewModels\GDPRDemoModel.cs" />
     <Compile Include="Models\ViewModels\ImageViewModel.cs" />
