@@ -1,4 +1,5 @@
-﻿using EPiServer.Web.Mvc;
+﻿using System.Linq;
+using EPiServer.Web.Mvc;
 using EpiserverLearningPlatform.Models.Pages;
 using EpiserverLearningPlatform.Models.ViewModels;
 using System.Web.Mvc;
@@ -18,9 +19,23 @@ namespace EpiserverLearningPlatform.Controllers
         public ActionResult Index(CourseOverviewPage currentPage)
         {
             var model = PageViewModel.Create(currentPage);
-            var courses = _contentLoader.GetChildren<CoursePage>(currentPage.ContentLink);
+            var actualModel = new CourseOverviewModel(currentPage)
+            {
+                Layout = model.Layout,
+                Section = model.Section
+            };
+            var courses = _contentLoader
+                .GetChildren<CoursePage>(currentPage.ContentLink)
+                .Select(course => new CourseModel()
+                {
+                    CourseName = course.CourseName,
+                    EndDate = course.EndDate,
+                    StartDate = course.StartDate,
+                    CourseImage = course.BannerImage,
+                });
 
-            return View(model);
+            actualModel.Courses = courses;
+            return View(actualModel);
         }
     }
 }
