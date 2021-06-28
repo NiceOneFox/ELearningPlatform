@@ -456,6 +456,7 @@
     <Content Include="Static\jwplayer\player.swf" />
     <Content Include="Static\jwplayer\preview.jpg" />
     <Content Include="Static\jwplayer\video.mp4" />
+    <Content Include="Views\CourseOverviewPage\Index.cshtml" />
     <Content Include="Views\Shared\Layouts\_MainLayout.cshtml" />
     <Content Include="Views\CoursePage\Index.cshtml" />
     <Content Include="Views\Web.config" />
