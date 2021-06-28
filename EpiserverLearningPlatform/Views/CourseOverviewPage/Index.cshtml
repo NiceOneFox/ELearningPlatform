@@ -1,11 +1,10 @@
 ﻿@model CourseOverviewModel
 @*model IEnumerable<EpiserverLearningPlatform.Models.ViewModels.CourseModel> *@
 
-@{
-    ViewBag.Title = "Index";
-}
 
-<h2>Index</h2>
+@{
+    Layout = "~/Views/Shared/Layouts/_MainLayout.cshtml";
+}
 
 <head>
     <meta charset="utf-8">
@@ -14,39 +13,139 @@
     <title>Course Overview</title>
     <link rel="shortcut icon" href="online-course.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .main-navbar {
+            margin-top: 10px;
+        }
 
+        .main-logo {
+            width: 100px;
+        }
+
+        .main-content {
+            margin-top: 10px;
+        }
+
+        .grey-background {
+            background-color: #b3b2b1;
+            padding: 30px;
+            width: 100%;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            z-index: 0;
+        }
+
+        .front-panel {
+            width: 80%;
+            z-index: 1;
+            margin: 40px 10px;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 2px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .subpanel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .courses-wrapper {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .course {
+            margin-left: 10px;
+            padding: 20px 5px 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            z-index: 2;
+            background-color: #ffffff;
+            border: 1px #000000 solid;
+        }
+
+        .course-image {
+            height: 100px;
+        }
+
+        .course-date {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 15px;
+        }
+
+        .date {
+            font-size: 10px;
+            margin-left: 10px;
+        }
+
+        .course-name {
+            margin-top: 10px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.CurrentPage)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CurrentPage)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CurrentPage)
-        </th>
-        <th></th>
-    </tr>
+<body>
 
-    @foreach (var course in Model.Courses)
-    {
+    <div class="container main-content">
+        <div class="grey-background">
+            <div class="front-panel">
+                <div class="subpanel">
+                    <h1>A LOT OF</h1>
+                    <span>Courses here</span>
+                </div>
+                <div class="subpanel">
+                    <span>From leading russian universities</span>
+                    <span>Courses for everyone without limits</span>
+                </div>
+                <div class="subpanel">
+                    <button class="btn">Enroll</button>
+                </div>
 
-        <div class="course">
-            <img class="course-image" src=@course.CourseImage alt="">
-            <div class="course-date">
-                <img class="calendar" src="calendar.png" alt="">
-                <div class="date">@course.StartDate</div>
-                <div class="date">@course.EndDate</div>
+                <div class="courses-wrapper">
+
+                    @foreach (var course in Model.Courses)
+                    {
+                        <div class="course">
+                            <img class="course-image" src=@course.CourseImage alt="">
+                            <div class="course-date">
+                                <img class="calendar" src="calendar.png" alt="">
+                                <div class="date">@course.StartDate</div>
+                                <div class="date">@course.EndDate</div>
+                            </div>
+                            <div class="course-name">@course.CourseName</div>
+
+                            <a href="@course.CourseLinkUrl" title="Link button" class="btn-blue">
+
+                            </a>
+                        </div>
+
+
+                    }
+
+                </div>
             </div>
-            <div class="course-name">@course.CourseName</div>
         </div>
 
-    }
 
-</table>
+    </div>
+
+</body>

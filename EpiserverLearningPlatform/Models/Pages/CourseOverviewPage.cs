@@ -19,7 +19,7 @@ namespace EpiserverLearningPlatform.Models.Pages
     {
         [Display(
             GroupName = Global.GroupNames.Specialized,
-            Order = 10),]
+            Order = 10)]
         [EditorDescriptor(EditorDescriptorType = typeof(CollectionEditorDescriptor<CourseModel>))]
         public virtual IList<CourseModel> Courses { get; set; }
     }

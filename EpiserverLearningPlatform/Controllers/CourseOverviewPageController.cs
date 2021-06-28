@@ -22,7 +22,7 @@ namespace EpiserverLearningPlatform.Controllers
             var actualModel = new CourseOverviewModel(currentPage)
             {
                 Layout = model.Layout,
-                Section = model.Section
+                Section = model.Section              
             };
             var courses = _contentLoader
                 .GetChildren<CoursePage>(currentPage.ContentLink)
