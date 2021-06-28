@@ -637,3 +637,11 @@ form.search-form {
     min-height: 1.1em;
     min-width: 1.6em;
 }
+
+.main-navbar {
+    margin-top: 10px;
+}
+
+.main-logo {
+    width: 100px;
+}
