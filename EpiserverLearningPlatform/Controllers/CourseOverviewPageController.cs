@@ -4,6 +4,7 @@ using EpiserverLearningPlatform.Models.Pages;
 using EpiserverLearningPlatform.Models.ViewModels;
 using System.Web.Mvc;
 using EPiServer;
+using EPiServer.Core;
 
 namespace EpiserverLearningPlatform.Controllers
 {
@@ -34,8 +35,10 @@ namespace EpiserverLearningPlatform.Controllers
                     CourseImage = course.BannerImage,
                 });
 
+
             actualModel.Courses = courses;
             return View(actualModel);
         }
+
     }
 }

@@ -125,17 +125,13 @@
                     @foreach (var course in Model.Courses)
                     {
                         <div class="course">
-                            <img class="course-image" src=@course.CourseImage alt="">
+                            <img class="course-image" src=@course.CourseImage alt="" href=@Url.ContentUrl(course.CourseLink)>
                             <div class="course-date">
                                 <img class="calendar" src="calendar.png" alt="">
                                 <div class="date">@course.StartDate</div>
                                 <div class="date">@course.EndDate</div>
                             </div>
                             <div class="course-name">@course.CourseName</div>
-
-                            <a href="@course.CourseLinkUrl" title="Link button" class="btn-blue">
-
-                            </a>
                         </div>
 
 
