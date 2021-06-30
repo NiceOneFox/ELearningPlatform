@@ -1,0 +1,79 @@
+﻿@using System.Web.Optimization
+@using EPiServer.Framework.Web.Mvc.Html
+@using EpiserverLearningPlatform.Business
+@model IPageViewModel<SitePageData>
+<!DOCTYPE html>
+<html lang="@Model.CurrentPage.LanguageBranch">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=10" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@Model.CurrentPage.MetaTitle</title>
+        @if (Model.CurrentPage.MetaKeywords != null && Model.CurrentPage.MetaKeywords.Length > 0)
+        {
+            <meta name="keywords" content="@string.Join(",", Model.CurrentPage.MetaKeywords)" />
+        }
+        @if (!string.IsNullOrWhiteSpace(Model.CurrentPage.MetaDescription))
+        {
+            <meta name="description" content="@Model.CurrentPage.MetaDescription" />
+        }
+        <link rel="shortcut icon" href="@Url.Content("~/courceicon.ico")" type="image/x-icon" />
+        <link rel="stylesheet" href="~/Static/css/style.css">
+        @Html.CanonicalLink()
+        @Html.AlternateLinks()
+        @Styles.Render("~/bundles/css")
+        @Scripts.Render("~/bundles/js")
+    </head>
+
+<body>
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light main-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <!-- TODO: Replace static url with Model property -->
+        <img class="main-logo" src="@Url.Content("~/Static/img/online-course.png")" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- TODO: Replace static links with Model properties -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</div>
+<div class="container">
+  @RenderBody();
+</div>
+<div class="container">
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+          <div class="row">
+            <div class="col-12 col-md">
+              <!-- TODO: Replace static url with Model property -->
+              <img class="mb-2" src="@Url.Content("~/Static/img/online-course.png")" alt="" width="24" height="24">
+              <small class="d-block mb-3 text-muted">&copy; 2021 EPiServer E-learning</small>
+            </div>
+            <div class="col-6 col-md">
+              <!-- TODO: Replace static links with Model properties -->
+              <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Courses</a></li>
+                <li><a class="text-muted" href="#">About</a></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+</div>
+</body>
+</html>

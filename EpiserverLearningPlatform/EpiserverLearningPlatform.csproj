@@ -358,6 +358,7 @@
     <Compile Include="Models\Pages\NewsPage.cs" />
     <Compile Include="Models\Pages\ProductPage.cs" />
     <Compile Include="Models\Pages\SitePageData.cs" />
+    <Compile Include="Models\Pages\SiteSettingsPage.cs" />
     <Compile Include="Models\Pages\StandardPage.cs" />
     <Compile Include="Models\Pages\StartPage.cs" />
     <Compile Include="Models\Properties\PropertyStringList.cs" />
@@ -376,6 +377,8 @@
     <Compile Include="Models\ViewModels\PreviewModel.cs" />
     <Compile Include="Models\ViewModels\VideoViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ISiteSettingsService.cs" />
+    <Compile Include="Services\SiteSettingsService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -392,8 +395,6 @@
     <Content Include="Resources\LanguageFiles\PropertyNames.xml" />
     <Content Include="Resources\LanguageFiles\Views.xml" />
     <Content Include="Resources\LanguageFiles\_ReadMe.txt" />
-    <Content Include="Static\css\bootstrap-collapse.js" />
-    <Content Include="Static\css\bootstrap-responsive.css" />
     <Content Include="Static\css\bootstrap.css" />
     <Content Include="Static\css\editmode.css" />
     <Content Include="Static\css\editor.css" />
@@ -438,6 +439,7 @@
     <Content Include="Static\html\error.htm" />
     <Content Include="Static\img\glyphicons-halflings-white.png" />
     <Content Include="Static\img\glyphicons-halflings.png" />
+    <Content Include="Static\img\online-course.png" />
     <Content Include="Static\js\bootstrap.js" />
     <Content Include="Static\js\jquery-ui.js" />
     <Content Include="Static\js\jquery.js" />
@@ -446,6 +448,7 @@
     <Content Include="Static\jwplayer\preview.jpg" />
     <Content Include="Static\jwplayer\video.mp4" />
     <Content Include="Views\CoursePage\Index.cshtml" />
+    <Content Include="Views\Shared\Layouts\_MainLayout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
